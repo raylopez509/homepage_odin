@@ -25,26 +25,36 @@ h2 {
 
 @media (min-width: 901px) {
 
+  body:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3000px;
+    background: blue;
+    transform: skew(-80deg);
+    transform-origin:top;
+  }
+
+  header {
+    display: flex;
+    gap: 0px;
+    margin: 2rem;
+  }
+
   .header-profile {
-    margin: 1rem;
+    /* margin: 1rem; */
     position: relative;
+    width:50%;
   }
   
   .header-profile > img {
-    width: 15%;
+    width: 100%;
     height: auto;
-    float: left;
+    /* float: left; */
   }
-
-  .header-about {
-    margin: 1rem;
-    top: 500px;
-    border: 1px solid red;
-  }
-
-  .header-about > p {
-    font-size: 20px;
-  }  
 
   .header-profile-name {
     display: flex;
@@ -52,10 +62,30 @@ h2 {
     align-items: center;
   }
 
+  .header-about {
+    margin: 5rem 0;
+    top: 500px;
+    /* border: 1px solid red; */
+    background: white;
+    box-shadow: 0px 0px 5px 0px gray;
+  }
+
+  .header-about > p {
+    font-size: 20px;
+  }  
+
+  /* .header-profile-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
   .header-profile-name > h1 {
-    top: 8px;
+    position: absolute;
     margin: 0px;
-    font-size: 70px;
+    bottom: 8px;
+    margin: 0px;
+    font-size: 100px;
   }
 
   .header-about > h1 {
